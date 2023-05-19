@@ -76,7 +76,6 @@ button:hover {
 
 button:active{
   background: rgb(80, 80, 206);
-  color: #302b63;
 }
 
 button svg {
