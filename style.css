@@ -436,6 +436,7 @@ button:hover span {
   background-color: #E6F2FF;
   height: 100%;
   width: 50%;
+  aspect-ratio: 1;
 }
 
 .poza {
@@ -495,9 +496,6 @@ button:hover span {
 
   .poza {
     height: max-content;
-  }
-
-  .poza-marime {
   }
 }
 
