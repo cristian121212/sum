@@ -1,10 +1,194 @@
- body {
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 16%;
+  background: #11101d;
+  padding: 15px 15px 15px 5px;
+  z-index: 909;
+}
+.logo {
+  font-size: 1.7vw;
+  margin: 0px;
+  white-space: nowrap;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-60%);
+  margin-left: 2%;
+}
+.menu-title {
+  color: #fff;
+  font-size: 2vw;
+  white-space: nowrap;
+  margin-left: 1%;
+  padding: 5px 0px;
+}
+.item a,
+.submenu-item {
+  padding-left: 2%;
+  font-size: 2vw;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.item i {
+  font-size: 2vw;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.submenu-item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 16%);
+  height: calc(100% + 100vh);
+  background: #11101d;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.navbar,
+.main,
+.main-1 {
+  left: 16%;
+  width: calc(100% - 16%);
+  transition: all 0.5s ease;
+  z-index: 10000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main,
+.sidebar.close ~ .main-1 {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 1% 1%;
+  font-size: 25px;
+  background: #4070f4;
+  cursor: pointer;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+.main {
+  position: relative;
+  z-index: 1000;
+  top: 0px;
+  background-color: rgb(138, 25, 138);
+  overflow: auto;
+  padding-top: 100px;
+}
+
+.main-1 {
+  position: relative;
+  z-index: 1000;
+  background-color: white;
+  top: 0px;
+  overflow: auto;
+  padding-top: 5%;
+  height: 100vh;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: roboto;
+}
+
+.div-body {
+  display: inline-block;
+  justify-content: left;
+  width: 100%;
+  height: 99vh;
+  overflow: hidden;
+  position: relative;
+  font-family: roboto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.div-body-1 {
+  display: inline-block;
+  justify-content: left;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: roboto;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media (max-width: 800px) {
+  .div-body {
+    padding-top: 50%;
+    overflow: auto;
+  }
+  
+  #wave {
+    height: 70vh;
+    overflow: auto;
+  }
+
+  .title {
+    padding-top: 10%;
+  }
+}
+
+@media (max-width:1000px) {
+  .poza-marime {
+    height: 16.3vh;
+  }
+}
+
+body {
   margin: 0px;
   font-family: roboto;
   position: relative;
   height: 100%;
   height: 100vh;
-  background-color: rgb(138, 25, 138);
   overflow: hidden;
  }
 
@@ -25,8 +209,76 @@
   font-weight: bold;
  }
 
+ .title-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(83, 99, 238);
+  margin-top: 0.5%;
+  padding: 3% 0px;
+ }
+ 
+ .title-2 {
+  display: flex;
+  font-weight: bold;
+  padding-left: 3%;
+  padding-top: 2%;
+ }
+
+ .title-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 3%;
+ }
+
+ .title-3 h1 {
+  font-size: 3vw;
+  color: black;
+ }
+
+ .title-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 3% 0px;
+ }
+
+ .title-4 h1 {
+  font-size: 2.6vw;
+  color: black;
+ }
+
+ .title-2 h1 {
+  font-weight: bold;
+  color: black;
+ }
+
+ .title-5 {
+  display: flex;
+  font-weight: bold;
+  padding-left: 0.8%;
+  padding-bottom: 1%;
+  text-decoration: underline;
+ }
+
+ .title-5 h1 {
+  font-size: 1.6vw;
+  font-weight: bold;
+  color: black;
+ }
+
+ .title-1 h1{
+  font-size: 5vw;
+  color: black;
+  padding: 0px;
+ }
+
  .title h1 {
   font-size: 7vw;
+  color: black;
  }
 
  #wave {
@@ -101,13 +353,127 @@ button:hover span {
   border-radius: 25px;
   width: 100%;
   padding: 10px 5px;
-  min-width: 380px;
+  min-width: 320px;
 }
 
 .button-start {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
+.definitul {
+  font-weight: bolder;
+  padding-right: 2%;
+}
+
+.def {
+  color: white;
+  font-size: 1.7vw;
+  display: flex;
+  padding-left: 2%;
+  border-left: dotted black;
+  margin: 0px;
+  padding: 2% 0%;
+  padding-left: 2%;
+}
+
+.br-block {
+  display: flex;
+  justify-content: center;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.container-2 {
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  padding: 4% 0px;
+  background-color: rgb(80, 80, 206);
+}
+
+.container-1 p {
+  font-size: 1.7vw;
+  text-align: center;
+}
+
+.option {
+  border-top: dotted black;
+  padding-top: 1%;
+  margin-right: 5%;
+}
+
+.text {
+  font-size: 2.1vw;
+  padding-right: 2%;
+  padding-left: 1%;
+  background-color: rgb(218, 196, 251);
+  height: 100%;
+  width: 50%;
+}
+
+.poza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.poza-marime {
+  float: left;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:1700px) {
+  .text {
+    font-size: 2.49vw;
+    padding-right: 2%;
+    padding-left: 1%;
+    background-color: rgb(218, 196, 251);
+    height: 100%;
+    width: 50%;
+    padding-top: 2%;
+  }
+  .container-2 {
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    padding: 3% 0px;
+    height: 100%;
+    background-color: rgb(80, 80, 206);
+  }
+}
+
+.div-body-1 p {
+  font-size: 1.2vw;
+  padding-left: 3%;
+}
+
+.enunt {
+  margin-left: 2%;
+}
+
+.link {
+  margin-top: 2%;
+}
+
+.link a {
+  text-decoration: none;
+}
+
+.link h1{
+  font-size: 2vw;
+  color: black;
+}
