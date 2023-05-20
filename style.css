@@ -404,10 +404,11 @@ button:hover span {
 .container-1 {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-left: 5%;
+  align-items: flex-start;
+  margin: 0px 5%;
   margin-top: 2%;
   margin-bottom: 5%;
+
 }
 
 .container-2 {
@@ -421,12 +422,21 @@ button:hover span {
 .container-1 p {
   font-size: 1.7vw;
   text-align: center;
+  border-top: dotted black;
+  padding-top: 5%;
+  max-width: 400px;
 }
 
 .option {
-  border-top: dotted black;
-  padding-top: 1%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  flex: 1fr;
+}
+
+.marime-poza {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
 }
 
 .text {
@@ -454,6 +464,7 @@ button:hover span {
   height: 100%;
   opacity: 0.9;
   aspect-ratio: 1;
+  display: block;
 }
 
 @media (min-width:1200px) {
@@ -466,7 +477,6 @@ button:hover span {
     width: 50%;
     display: flex;
     align-items: center;
-    aspect-ratio: 1;
   }
   .container-2 {
     justify-content: center;
@@ -486,7 +496,6 @@ button:hover span {
     background-color: #E6F2FF;
     width: 50%;
     padding-top: 2%;
-    aspect-ratio: 1;
   }
   .container-2 {
     justify-content: center;
@@ -521,4 +530,14 @@ button:hover span {
 .link h1{
   font-size: 2vw;
   color: black;
+}
+
+.poza-container {
+  margin-bottom: 2%;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 1;
 }
