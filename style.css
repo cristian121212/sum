@@ -237,6 +237,7 @@ body {
  
  .title-2 {
   display: flex;
+  justify-content: center;
   font-weight: bold;
   padding-left: 3%;
   padding-top: 2%;
