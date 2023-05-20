@@ -466,6 +466,7 @@ button:hover span {
     width: 50%;
     display: flex;
     align-items: center;
+    aspect-ratio: 1;
   }
   .container-2 {
     justify-content: center;
@@ -485,6 +486,7 @@ button:hover span {
     background-color: #E6F2FF;
     width: 50%;
     padding-top: 2%;
+    aspect-ratio: 1;
   }
   .container-2 {
     justify-content: center;
